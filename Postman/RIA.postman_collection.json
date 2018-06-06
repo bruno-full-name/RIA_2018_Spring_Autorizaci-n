@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "62e5ffbf-95e3-4e2a-b79f-298710f964a6",
+		"name": "RIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JWT-token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "RIA",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJicnVub0ByaWEuY29tIiwiZXhwIjoxNTI3NjE5OTM5LCJpYXQiOjE1Mjc2MTk5MDksInVzZXJuYW1lIjoiQnJ1bm9DIn0.RjPgVFgNjgXdrP71T6bJoepRLC33hd_tTPws5JvPqNU",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"fulano@ria.com\",\"password\":\"qwerty\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token"
+					]
+				},
+				"description": "Pedido para obtener un token"
+			},
+			"response": []
+		},
+		{
+			"name": "JWT-mensaje",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RIA eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmdWxhbm9AcmlhLmNvbSIsImV4cCI6MTUyODIzNTM3MiwiaWF0IjoxNTI4MjM1MzQyLCJ1c2VybmFtZSI6IkZ1bGFubyJ9.HYqFKV69_wsWDXkB_WcZB0HCLmguUfJDnrfNHQP3u94"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/index",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"index"
+					]
+				},
+				"description": "Pedido para ver un mensaje de respuesta utilizando el token generado en el pedido anterior"
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticación básica",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ria",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "qwerty",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/service",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service"
+					]
+				},
+				"description": "Pedido para probar la autenticación básica"
+			},
+			"response": []
+		}
+	]
+}

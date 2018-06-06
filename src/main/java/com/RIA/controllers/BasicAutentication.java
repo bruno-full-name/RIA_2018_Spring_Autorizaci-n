@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/service")
 public class BasicAutentication {
 
-
     @RequestMapping(method = RequestMethod.GET)
     public String echo() {
         return "Usuario y contraseña correctos :D";

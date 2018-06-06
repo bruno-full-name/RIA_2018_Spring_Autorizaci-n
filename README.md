@@ -1,7 +1,8 @@
 RIA_2018_Spring_Autorización
 ====================================
+Presentación: https://prezi.com/view/A49XV0LkOBqm6z2skHZW/
 
-## Requisitos
+## Requisitos para ejecutar la aplicación
 Tener Maven instalado y agregado al path del correspondiente sistema operativo
 
 ## Compilación y empaquetado
@@ -54,3 +55,6 @@ En caso de que la consulta sea exitosa el resultado deberia ser: `Bienvendio Ful
 curl -X GET http://ria:qwerty@localhost:8080/service
 ```
 Esta consulta debería retornar: `Usuario y contraseña correctos :D`
+
+
+
